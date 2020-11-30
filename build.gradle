@@ -35,6 +35,8 @@ test.environment([
         "WELCOME_MESSAGE": "Hello from test",
         "SPRING_DATASOURCE_URL": testDbUrl,
         "MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE" : "*",
+        "MANAGEMENT_ENDPOINT_HEALTH_SHOWDETAILS": "ALWAYS",
+        "MANAGEMENT_HEALTH_PROBES_ENABLED": true,
 ])
 
 flyway {
