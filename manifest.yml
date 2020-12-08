@@ -4,5 +4,5 @@ applications:
     routes:
     - route : pal-tracker-rk-marneni.apps.evans.pal.pivotal.io
     env:
-      WELCOME_MESSAGE: Hello from continuous integration
+      WELCOME_MESSAGE: Hello from Cloud Foundry
       JBP_CONFIG_OPEN_JDK_JRE: '{ jre: { version: 11.+ } }'
