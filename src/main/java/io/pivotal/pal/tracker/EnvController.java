@@ -8,14 +8,14 @@ import java.util.HashMap;
 
 
 @RestController
-public class envController {
+public class EnvController {
 
     private final String port ;
     private final String memoryLimit;
     private final String cfInstanceIndex ;
     private final String cfInstanceAddress ;
 
-    private envController(@Value("${port:NOT SET}") String port,
+    public EnvController(@Value("${port:NOT SET}") String port,
                           @Value("${memoryLimit:NOT SET}") String memoryLimit,
                           @Value("${cf.instance.index:NOT SET}") String cfInstanceIndex,
                           @Value("${cf.instance.address:NOT SET}") String cfInstanceAddress
@@ -28,7 +28,7 @@ public class envController {
     }
 
     @GetMapping("/env")
-    public Map<String, String> gerEnv() {
+    public Map<String, String> getEnv() {
         Map<String, String> env = new HashMap<>();
         env.put("PORT", this.port);
         env.put("MEMORY_LIMIT", this.memoryLimit);

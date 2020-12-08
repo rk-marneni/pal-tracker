@@ -8,7 +8,7 @@ import org.springframework.beans.factory.annotation.*;
 public class WelcomeController {
     private String  helloMessage = "";
 
-    private WelcomeController(@Value("${welcome.message}") String helloMessage) {
+    public WelcomeController(@Value("${welcome.message}") String helloMessage) {
         this.helloMessage = helloMessage;
     }
 
